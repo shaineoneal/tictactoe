@@ -7,8 +7,6 @@ using namespace std;
 
 //prints game board
 
-
-
 char searchChoice(int choice, char board[3][3])
 {
     for(int row = 0; row < 3; ++row)
