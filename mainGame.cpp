@@ -2,7 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cctype>
-#include "view.h"
+#include "board.h"
 
 using namespace std;
 
@@ -27,7 +27,8 @@ void Player::selectLetter()
 int main ()
 {
     Player player1, player2;
-    int choice;
+    Board bord;
+    char choice;
 
   //player 1 character select
     cout << "Player 1 - ";
@@ -39,11 +40,14 @@ int main ()
     player2.selectLetter();
     cout << "Your character is: " << player2.getLetter() << endl;
 
-    squareDisplay();
-
+    bord.display();
+  //player1 square selection
     cout << "Player 1, select a square: ";
     cin >> choice;
 
+    bord.updateDisplay(bord.searchChoice(choice), player1.getLetter());
+
+    bord.display();
 
     return 0;
 }
