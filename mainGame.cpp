@@ -41,6 +41,9 @@ int main ()
     cout << "Your character is: " << player2.getLetter() << endl;
 
     bord.display();
+
+    
+    
   //player1 square selection
     cout << "Player 1, select a square: ";
     cin >> choice;

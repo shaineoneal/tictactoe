@@ -1,5 +1,7 @@
 #include <iostream>
+#include <algorithm>
 #include "board.h"
+
 
 using namespace std;
 
@@ -43,4 +45,10 @@ void Board::display()
     cout << "     |     |     \n  ";
     cout << board[2][0] << "  |  " << board[2][1] << "  |  " << board[2][2] << "  \n";
     cout << "     |     |     " << endl;
+}
+
+bool Board::winCheck()
+{
+  //check corners
+
 }

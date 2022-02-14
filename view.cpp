@@ -22,4 +22,12 @@ char searchChoice(int choice, char board[3][3])
     }
 }
 
-char validChoice ()
+char validChoice ();
+
+
+
+/* if turn is greater than 6, begin evaluating after every turn
+*on turn, count number of player1's char and player2's char
+*if either is >= 2 check middle square btwn them.
+*if middle sq = correct player char, that player has won.
+*/

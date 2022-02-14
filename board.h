@@ -10,6 +10,7 @@ class Board {
         char* searchChoice(char);
         void display();
         void updateDisplay(char*, char);
+        bool winCheck();
 
 };
 
