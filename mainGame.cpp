@@ -6,29 +6,14 @@
 
 using namespace std;
 
-class Player {
-        char letter;
 
-    public:
-        void selectLetter();
-        char getLetter()
-            {return letter;}
-};
-
-
-void Player::selectLetter()
-{
-  //ask player for character
-    cout << "Please select a letter for your character: ";
-    cin >> letter;
-    letter = toupper(letter);
-}
 
 int main ()
 {
     Player player1, player2;
     Board bord;
     char choice;
+    int turn;
 
   //player 1 character select
     cout << "Player 1 - ";
@@ -42,15 +27,60 @@ int main ()
 
     bord.display();
 
-    
-    
-  //player1 square selection
-    cout << "Player 1, select a square: ";
-    cin >> choice;
+    while(turn < 6)
+    {
+        if(turn % 2 == 1)
+        {
+          //player1 square selection
+            cout << "Player 1, select a square: ";
+            cin >> choice;
 
-    bord.updateDisplay(bord.searchChoice(choice), player1.getLetter());
+            bord.updateDisplay(bord.searchChoice(choice), player1.getLetter());
 
-    bord.display();
+            bord.display();
+        }
+        else if (turn % 2 == 0)
+        {
+          cout << "Player 2, select a square: ";
+          cin >> choice;
+
+          bord.updateDisplay(bord.searchChoice(choice), player2.getLetter());
+
+          bord.display();
+        }
+
+        turn++;
+    }
+    
+    while(bord.winCheck() == false)
+    {
+        if(turn % 2 == 1)
+        {
+          //player1 square selection
+            cout << "Player 1, select a square: ";
+            cin >> choice;
+
+            bord.updateDisplay(bord.searchChoice(choice), player1.getLetter());
+
+            bord.display();
+        }
+        else if (turn % 2 == 0)
+        {
+          cout << "Player 2, select a square: ";
+          cin >> choice;
+
+          bord.updateDisplay(bord.searchChoice(choice), player2.getLetter());
+
+          bord.display();
+        }
+
+        bord.winCheck();
+        turn++;
+    }
+  
+    cout << "win";
+
+    //bord.winCheck();
 
     return 0;
 }

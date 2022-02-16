@@ -47,8 +47,15 @@ void Board::display()
     cout << "     |     |     " << endl;
 }
 
-bool Board::winCheck()
+bool Board::winCheck(char (Player::getLetter)())
 {
+    bool winCheck = false;
   //check corners
+//    corners[0] 
+    if(count(corners, corners + 3, ))
+    {
+        winCheck = true;
+    }
 
+    return winCheck;
 }
