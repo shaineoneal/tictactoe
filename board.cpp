@@ -50,5 +50,12 @@ void Board::display()
 bool Board::winCheck()
 {
   //check corners
+    return *corners;
 
+//    count()
 }
+
+//void Board::setCorners()
+//{
+//    **corners[][] = 
+//}

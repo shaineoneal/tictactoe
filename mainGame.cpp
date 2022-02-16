@@ -30,6 +30,9 @@ int main ()
     Board bord;
     char choice;
 
+
+
+
   //player 1 character select
     cout << "Player 1 - ";
     player1.selectLetter();
@@ -42,7 +45,7 @@ int main ()
 
     bord.display();
 
-    
+
     
   //player1 square selection
     cout << "Player 1, select a square: ";
@@ -52,6 +55,7 @@ int main ()
 
     bord.display();
 
+        cout << bord.winCheck();
     return 0;
 }
 //player1 select character
