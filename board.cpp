@@ -51,6 +51,7 @@ bool Board::winCheck(char (Player::getLetter)())
 {
     bool winCheck = false;
   //check corners
+<<<<<<< HEAD
 //    corners[0] 
     if(count(corners, corners + 3, ))
     {
@@ -59,3 +60,14 @@ bool Board::winCheck(char (Player::getLetter)())
 
     return winCheck;
 }
+=======
+    return *corners;
+
+//    count()
+}
+
+//void Board::setCorners()
+//{
+//    **corners[][] = 
+//}
+>>>>>>> 739326ad0446da981ad603e9a8bf0198c3fe1997

@@ -15,6 +15,9 @@ int main ()
     char choice;
     int turn;
 
+
+
+
   //player 1 character select
     cout << "Player 1 - ";
     player1.selectLetter();
@@ -27,6 +30,7 @@ int main ()
 
     bord.display();
 
+<<<<<<< HEAD
     while(turn < 6)
     {
         if(turn % 2 == 1)
@@ -59,6 +63,13 @@ int main ()
           //player1 square selection
             cout << "Player 1, select a square: ";
             cin >> choice;
+=======
+
+    
+  //player1 square selection
+    cout << "Player 1, select a square: ";
+    cin >> choice;
+>>>>>>> 739326ad0446da981ad603e9a8bf0198c3fe1997
 
             bord.updateDisplay(bord.searchChoice(choice), player1.getLetter());
 
@@ -82,6 +93,7 @@ int main ()
 
     //bord.winCheck();
 
+        cout << bord.winCheck();
     return 0;
 }
 //player1 select character
