@@ -6,23 +6,7 @@
 
 using namespace std;
 
-class Player {
-        char letter;
 
-    public:
-        void selectLetter();
-        char getLetter()
-            {return letter;}
-};
-
-
-void Player::selectLetter()
-{
-  //ask player for character
-    cout << "Please select a letter for your character: ";
-    cin >> letter;
-    letter = toupper(letter);
-}
 
 int main ()
 {
@@ -42,6 +26,10 @@ int main ()
     cout << "Player 2 - ";
     player2.selectLetter();
     cout << "Your character is: " << player2.getLetter() << endl;
+
+  //size of game board
+    cout << "How large would you like your gameboard to be? ";
+    
 
     bord.display();
 

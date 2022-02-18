@@ -1,5 +1,7 @@
 #include <iostream>
+#include <vector>
 #include <algorithm>
+#include <bits/stdc++.h>
 #include "board.h"
 
 
@@ -47,10 +49,18 @@ void Board::display()
     cout << "     |     |     " << endl;
 }
 
-bool Board::winCheck()
+bool Board::winCheck(char playerChar)
 {
+    bool didWin;
+
   //check corners
-    return *corners;
+    if(count(corners, corners + 3, playerChar) <= 2)
+    {
+      //sm actually won (probs)
+        
+    }
+
+    return didWin;
 
 //    count()
 }
